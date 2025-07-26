@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio & Success Stories - Koi Digital Marketing | Austin Results</title>
+    <meta name="description" content="See real results from our Austin digital marketing campaigns. Case studies showing 300% traffic growth, 250% lead increases, and 180% sales growth for local businesses.">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #6366f1;
+            --secondary-color: #0f172a;
+            --accent-color: #ec4899;
+            --success-color: #10b981;
+            --dark-color: #0f172a;
+            --light-gray: #f8fafc;
+            --medium-gray: #64748b;
+            --white: #ffffff;
+            --gradient: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            --gradient-alt: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            --shadow-lg: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark-color);
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark-color);
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-links a.active::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--gradient);
+        }
+
+        /* Page Hero */
+        .page-hero {
+            padding: 8rem 0 4rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #667eea 100%);
+            color: var(--white);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 20%, rgba(99, 102, 241, 0.3) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 80%, rgba(236, 72, 153, 0.3) 0%, transparent 50%);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .page-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .page-hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Stats Overview */
+        .stats-overview {
+            padding: 4rem 0;
+            background: var(--white);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .stat-card {
+            background: var(--light-gray);
+            padding: 2.5rem 2rem;
+            border-radius: 25px;
+            text-align: center;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--gradient);
+        }
+
+        .stat-card:hover {
+            background: var(--white);
+            box-shadow: var(--shadow);
+            transform: translateY(-5px);
+        }
+
+        .stat-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--gradient);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: var(--white);
+            font-size: 2rem;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--dark-color);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: var(--medium-gray);
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        .stats-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .stats-intro h2 {
+            font-size: 2.5rem;
+            color: var(--dark-color);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .stats-intro p {
+            font-size: 1.2rem;
+            color: var(--medium-gray);
+            line-height: 1.7;
+        }
+
+        /* Portfolio Section */
+        .portfolio {
+            padding: 6rem 0;
+            background: var(--light-gray);
+        }
+
+        .portfolio-grid {
+            display: grid;
+            gap: 4rem;
+        }
+
+        .case-study {
+            background: var(--white);
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .case-study:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .case-study:nth-child(even) .case-study-header {
+            background: var(--gradient);
+        }
+
+        .case-study:nth-child(odd) .case-study-header {
+            background: var(--gradient-alt);
+        }
+
+        .case-study-header {
+            padding: 3rem;
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .case-study-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100px;
+            height: 100px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transform: translate(30px, -30px);
+        }
+
+        .client-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .client-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1.5rem;
+            font-size: 2.5rem;
+        }
+
+        .client-details h3 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .client-type {
+            opacity: 0.9;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        .case-study-content {
+            padding: 3rem;
+        }
+
+        .challenge-solution {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .challenge, .solution {
+            background: var(--light-gray);
+            padding: 2rem;
+            border-radius: 20px;
+        }
+
+        .challenge h4, .solution h4 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: var(--dark-color);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+        }
+
+        .challenge h4::before {
+            content: '⚡';
+            margin-right: 0.5rem;
+            font-size: 1.5rem;
+        }
+
+        .solution h4::before {
+            content: '🎯';
+            margin-right: 0.5rem;
+            font-size: 1.5rem;
+        }
+
+        .challenge p, .solution p {
+            color: var(--medium-gray);
+            line-height: 1.6;
+        }
+
+        .results-section {
+            background: var(--light-gray);
+            padding: 2.5rem;
+            border-radius: 20px;
+            margin-bottom: 2rem;
+        }
+
+        .results-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .results-header h4 {
+            font-size: 1.5rem;
+            color: var(--dark-color);
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .result-item {
+            text-align: center;
+            background: var(--white);
+            padding: 2rem 1rem;
+            border-radius: 15px;
+            transition: var(--transition);
+        }
+
+        .result-item:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+
+        .result-item h5 {
+            font-size: 2.5rem;
+            color: var(--success-color);
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .result-item p {
+            color: var(--medium-gray);
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        .timeline {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 15px;
+            border-left: 4px solid var(--success-color);
+        }
+
+        .timeline h4 {
+            color: var(--dark-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .timeline p {
+            color: var(--medium-gray);
+            font-size: 0.95rem;
+        }
+
+        /* Testimonial Section */
+        .testimonials {
+            padding: 6rem 0;
+            background: var(--white);
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: var(--light-gray);
+            padding: 3rem;
+            border-radius: 25px;
+            position: relative;
+            transition: var(--transition);
+        }
+
+        .testimonial-card:hover {
+            background: var(--white);
+            box-shadow: var(--shadow);
+            transform: translateY(-5px);
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: 1rem;
+            left: 2rem;
+            font-size: 4rem;
+            color: var(--primary-color);
+            opacity: 0.3;
+            font-family: serif;
+        }
+
+        .testimonial-text {
+            font-size: 1.1rem;
+            color: var(--medium-gray);
+            line-height: 1.7;
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+
+        .author-avatar {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            color: var(--white);
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .author-info h5 {
+            color: var(--dark-color);
+            font-size: 1.1rem;
+            margin-bottom: 0.2rem;
+            font-weight: 600;
+        }
+
+        .author-info p {
+            color: var(--medium-gray);
+            font-size: 0.9rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 6rem 0;
+            background: var(--dark-color);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Buttons */
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background: var(--gradient);
+            color: var(--white);
+            box-shadow: var(--shadow);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+
+        .btn-secondary:hover {
+            background: var(--white);
+            color: var(--dark-color);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-color);
+            color: var(--white);
+            padding: 3rem 0 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            text-align: center;
+        }
+
+        .footer-content p {
+            margin-bottom: 1rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .page-hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .challenge-solution {
+                grid-template-columns: 1fr;
+            }
+
+            .results-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .testimonial-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .client-info {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .client-icon {
+                margin-right: 0;
+                margin-bottom: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .case-study-header {
+                padding: 2rem;
+            }
+
+            .case-study-content {
+                padding: 2rem;
+            }
+
+            .results-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .testimonial-card {
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">KoiDigital</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html" class="active">Portfolio</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Success Stories</h1>
+            <p>Real results for real businesses. See how we've helped Austin companies achieve remarkable growth through strategic digital marketing.</p>
+        </div>
+    </section>
+
+    <!-- Stats Overview -->
+    <section class="stats-overview">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <span class="stat-number">300%</span>
+                    <span class="stat-label">Average Traffic Increase</span>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <span class="stat-number">250%</span>
+                    <span class="stat-label">Lead Generation Boost</span>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <span class="stat-number">180%</span>
+                    <span class="stat-label">Sales Growth</span>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <span class="stat-number">50+</span>
+                    <span class="stat-label">Happy Clients</span>
+                </div>
+            </div>
+            
+            <div class="stats-intro">
+                <h2>Proven Results That Drive Growth</h2>
+                <p>Every business is unique, but our commitment to delivering measurable results remains constant. Here are three detailed case studies showcasing how we've helped Austin businesses transform their digital presence and achieve extraordinary growth.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Cases -->
+    <section class="portfolio">
+        <div class="container">
+            <div class="portfolio-grid">
+                <!-- Case Study 1: Tech Startup -->
+                <div class="case-study">
+                    <div class="case-study-header">
+                        <div class="client-info">
+                            <div class="client-icon">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <div class="client-details">
+                                <h3>TechFlow Solutions</h3>
+                                <div class="client-type">B2B SaaS Startup • Austin, TX</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="case-study-content">
+                        <div class="challenge-solution">
+                            <div class="challenge">
+                                <h4>The Challenge</h4>
+                                <p>A newly launched Austin-based SaaS company needed to generate qualified leads and establish market presence in the competitive project management software space. They had a great product but zero online visibility.</p>
+                            </div>
+                            <div class="solution">
+                                <h4>Our Solution</h4>
+                                <p>We implemented a comprehensive digital marketing strategy combining SEO-optimized content marketing, targeted LinkedIn advertising, and automated email nurturing sequences to attract and convert enterprise clients.</p>
+                            </div>
+                        </div>
+
+                        <div class="results-section">
+                            <div class="results-header">
+                                <h4>🚀 Results Achieved in 6 Months</h4>
+                            </div>
+                            <div class="results-grid">
+                                <div class="result-item">
+                                    <h5>300%</h5>
+                                    <p>Organic Traffic Increase</p>
+                                </div>
+                                <div class="result-item">
+                                    <h5>250%</h5>
+                                    <p>Lead Generation Boost</p>
+                                </div>
+                                <div class="result-item">
+                                    <h5>$2.1M</h5>
+                                    <p>Pipeline Generated</p>
+                                </div>
+                                <div class="result-item">
+                                    <h5>85%</h5>
+                                    <p>Email Open Rate</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline">
+                            <h4>📅 Project Timeline</h4>
+                            <p>6-month intensive campaign focusing on content marketing, SEO optimization, and lead nurturing automation. The client saw their first qualified leads within 30 days and achieved 300% growth by month 6.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case Study 2: E-commerce -->
+                <div class="case-study">
+                    <div class="case-study-header">
+                        <div class="client-info">
+                            <div class="client-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                            <div class="client-details">
+                                <h3>Austin Artisan Co.</h3>
+                                <div class="client-type">E-commerce Store • Handcrafted Goods</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="case-study-content">
+                        <div class="challenge-solution">
+                            <div class="challenge">
+                                <h4>The Challenge</h4>
+                                <p>A local handcrafted goods e-commerce store struggled with low online visibility and needed to compete with larger retailers while maintaining their authentic Austin brand and artisan story.</p>
+                            </div>
+                            <div class="solution">
+                                <h4>Our Solution</h4>
+                                <p>We developed a local SEO strategy, created engaging social media content showcasing the artisan process, and implemented targeted Google Shopping campaigns to drive qualified traffic and sales.</p>
+                            </div>
+                        </div>
+
+                        <div class="results-section">
+                            <div class="results-header">
+                                <h4>🎯 Results Achieved in 8 Months</h4>
+                            </div>
+                            <div class="results-grid">
+                                <div class="result-item">
+                                    <h5>180%</h5>
+                                    <p>Sales Growth</p>
+                                </div>
+                                <div class="result-item">
+                                    <h5>220%</h5>
+                                    <p>Conversion Rate Increase</p>
+                                </div>
+                                <div class="result-item">
+                                    <h5>400%</h5>
+                                    <p>Social Media Engagement</p>
+                                </div>
+                                <div class="result-item">
+                                    <h5>65%</h5>
+                                    <p>Repeat Customer Rate</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline">
+                            <h4>📅 Project Timeline</h4>
+                            <p>8-month comprehensive campaign focusing on local SEO, social media storytelling, and Google Shopping optimization. The authentic Austin brand story resonated perfectly with our targeted approach.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case Study 3: Local Restaurant -->
+                <div class="case-study">
+                    <div class="case-study-header">
+                        <div class="client-info">
+                            <div class="client-icon">
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                            <div class="client-details">
+                                <h3>Smoky Joe's BBQ</h3>
+                                <div class="client-type">Local Restaurant • East Austin</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="case-study-content">
+                        <div class="challenge-solution">
+                            <div class="challenge">
+                                <h4>The Challenge</h4>
+                                <p>A family-owned BBQ restaurant in East Austin needed to increase local visibility, drive foot traffic, and compete with established barbecue joints in the highly competitive Austin food scene.</p>
+                            </div>
+                            <div class="solution">
+                                <h4>Our Solution</h4>
+                                <p>We focused on local SEO optimization, Google My Business management, targeted Facebook and Instagram advertising to food enthusiasts, and implemented a loyalty email program to encourage repeat visits.</p>
+                            </div>
+                        </div>
+
+                        <div class="results-section">
+                            <div class="results-header">
+                                <h4>🍖 Results Achieved in 4 Months</h4>
+                            </div>
+                            <div class="results-grid">
+                                <div class="result-item">
+                                    <h5>400%</h5>
+                                    <p>Local Visibility Increase</p>
+                                </div>
+                                <div class="result-item">
+                                    <h5>150%</h5>
+                                    <p>Reservation Growth</p>
+                                </div>
+                                <div class="result-item">
+                                    <h5>275%</h5>
+                                    <p>Social Media Followers</p>
+                                </div>
+                                <div class="result-item">
+                                    <h5>4.8/5</h5>
+                                    <p>Google Review Rating</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline">
+                            <h4>📅 Project Timeline</h4>
+                            <p>4-month intensive local marketing campaign. Fast results were crucial for this restaurant, and our local Austin expertise helped them quickly become a neighborhood favorite with strong online presence.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 4rem;">
+                <h2 style="font-size: 2.5rem; color: var(--dark-color); margin-bottom: 1rem; font-weight: 700;">What Our Clients Say</h2>
+                <p style="font-size: 1.2rem; color: var(--medium-gray);">Real feedback from real Austin business owners</p>
+            </div>
+            
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">Koi Digital Marketing completely transformed our online presence. We went from being invisible on Google to ranking #1 for our target keywords. The ROI has been incredible - our pipeline increased by over 250% in just 6 months.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">M</div>
+                        <div class="author-info">
+                            <h5>Mike Chen</h5>
+                            <p>CEO, TechFlow Solutions</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-text">Working with Koi Digital has been amazing. They really understand the Austin market and helped us tell our artisan story in a way that resonates with customers. Our online sales have nearly tripled!</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">S</div>
+                        <div class="author-info">
+                            <h5>Sarah Williams</h5>
+                            <p>Founder, Austin Artisan Co.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-text">As a local restaurant, we needed someone who understood Austin's food scene. Koi Digital not only boosted our visibility but helped us build a loyal community. We're now the go-to BBQ spot in East Austin!</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">J</div>
+                        <div class="author-info">
+                            <h5>Joe Martinez</h5>
+                            <p>Owner, Smoky Joe's BBQ</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Be Our Next Success Story?</h2>
+            <p>Let's discuss how we can achieve similar results for your Austin business</p>
+            <div class="cta-buttons">
+                <a href="contact.html" class="btn btn-primary">Get Your Free Consultation</a>
+                <a href="services.html" class="btn btn-secondary">View Our Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Koi Digital Marketing. Helping Austin businesses thrive online.</p>
+            <p>📧 hello@koidigitalmarketing.com | 📍 Austin, Texas</p>
+        </div>
+    </footer>
+</body>
+</html>

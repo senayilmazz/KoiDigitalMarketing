@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Marketing Services - Koi Digital Marketing | Austin, Texas</title>
+    <meta name="description" content="Comprehensive digital marketing services in Austin. Expert SEO, PPC, Social Media & Email Marketing for startups and local businesses. Get results that matter.">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #6366f1;
+            --secondary-color: #0f172a;
+            --accent-color: #ec4899;
+            --success-color: #10b981;
+            --dark-color: #0f172a;
+            --light-gray: #f8fafc;
+            --medium-gray: #64748b;
+            --white: #ffffff;
+            --gradient: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            --gradient-alt: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            --shadow-lg: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark-color);
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark-color);
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-links a.active::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--gradient);
+        }
+
+        /* Page Hero */
+        .page-hero {
+            padding: 8rem 0 4rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #667eea 100%);
+            color: var(--white);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 20%, rgba(99, 102, 241, 0.3) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 80%, rgba(236, 72, 153, 0.3) 0%, transparent 50%);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .page-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .page-hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Services Detail Section */
+        .services-detail {
+            padding: 6rem 0;
+            background: var(--light-gray);
+        }
+
+        .service-detail-card {
+            background: var(--white);
+            padding: 4rem 3rem;
+            border-radius: 30px;
+            box-shadow: var(--shadow);
+            margin-bottom: 3rem;
+            position: relative;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .service-detail-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: var(--gradient);
+        }
+
+        .service-detail-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .service-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .service-header i {
+            font-size: 3rem;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-right: 1rem;
+        }
+
+        .service-detail-card h3 {
+            color: var(--dark-color);
+            font-size: 2.2rem;
+            margin: 0;
+            font-weight: 700;
+        }
+
+        .service-intro {
+            font-size: 1.2rem;
+            color: var(--medium-gray);
+            margin-bottom: 3rem;
+            line-height: 1.8;
+        }
+
+        .service-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .feature-item {
+            background: var(--light-gray);
+            padding: 2rem;
+            border-radius: 20px;
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .feature-item:hover {
+            background: var(--white);
+            box-shadow: var(--shadow);
+            transform: translateY(-3px);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            color: var(--white);
+            font-size: 1.5rem;
+        }
+
+        .feature-item h4 {
+            color: var(--dark-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .feature-item p {
+            color: var(--medium-gray);
+            font-size: 0.95rem;
+        }
+
+        /* Process Steps */
+        .process-section {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 20px;
+            margin-top: 2rem;
+        }
+
+        .process-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .process-header h4 {
+            font-size: 1.8rem;
+            color: var(--dark-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .process-header p {
+            color: var(--medium-gray);
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .process-step {
+            text-align: center;
+            padding: 2rem 1rem;
+            position: relative;
+        }
+
+        .step-number {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: bold;
+            margin: 0 auto 1.5rem;
+            box-shadow: 0 10px 25px rgba(99, 102, 241, 0.3);
+        }
+
+        .process-step h5 {
+            font-size: 1.3rem;
+            color: var(--dark-color);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .process-step p {
+            color: var(--medium-gray);
+            line-height: 1.6;
+        }
+
+        /* Pricing Section */
+        .pricing-section {
+            background: var(--light-gray);
+            padding: 2rem;
+            border-radius: 20px;
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        .pricing-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .pricing-section h4 {
+            font-size: 1.8rem;
+            color: var(--dark-color);
+            margin-bottom: 1rem;
+        }
+
+        .pricing-section p {
+            color: var(--medium-gray);
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        /* Buttons */
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background: var(--gradient);
+            color: var(--white);
+            box-shadow: var(--shadow);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary-color);
+            color: var(--white);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 6rem 0;
+            background: var(--dark-color);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-color);
+            color: var(--white);
+            padding: 3rem 0 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            text-align: center;
+        }
+
+        .footer-content p {
+            margin-bottom: 1rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .page-hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .service-detail-card {
+                padding: 2.5rem 1.5rem;
+            }
+
+            .service-header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .service-header i {
+                margin-right: 0;
+                margin-bottom: 1rem;
+            }
+
+            .service-features {
+                grid-template-columns: 1fr;
+            }
+
+            .process-steps {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .service-detail-card {
+                padding: 2rem 1rem;
+            }
+
+            .page-hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .service-detail-card h3 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">KoiDigital</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Our Digital Marketing Services</h1>
+            <p>Comprehensive solutions designed to grow your business and maximize your online presence in Austin and beyond</p>
+        </div>
+    </section>
+
+    <!-- Services Detail -->
+    <section class="services-detail">
+        <div class="container">
+            <!-- SEO Service -->
+            <div class="service-detail-card">
+                <div class="service-header">
+                    <i class="fas fa-search"></i>
+                    <h3>Search Engine Optimization (SEO)</h3>
+                </div>
+                <p class="service-intro">Our SEO strategies are built on data, research, and proven methodologies that deliver sustainable organic growth. We don't just improve your rankings – we transform your entire online presence to attract your ideal customers in Austin and beyond.</p>
+                
+                <div class="service-features">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-magnifying-glass"></i>
+                        </div>
+                        <h4>Keyword Research</h4>
+                        <p>In-depth analysis to find high-value keywords your customers are actually searching for</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h4>Technical SEO</h4>
+                        <p>Optimize your website's foundation for search engines and improved user experience</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-file-text"></i>
+                        </div>
+                        <h4>Content Strategy</h4>
+                        <p>Create valuable, optimized content that ranks well and converts visitors into customers</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-link"></i>
+                        </div>
+                        <h4>Link Building</h4>
+                        <p>Earn high-quality backlinks that boost your domain authority and search rankings</p>
+                    </div>
+                </div>
+
+                <div class="process-section">
+                    <div class="process-header">
+                        <h4>Our SEO Process</h4>
+                        <p>A systematic approach to dominating search results</p>
+                    </div>
+                    <div class="process-steps">
+                        <div class="process-step">
+                            <div class="step-number">1</div>
+                            <h5>SEO Audit</h5>
+                            <p>Comprehensive analysis of your current SEO performance and competitive landscape</p>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-number">2</div>
+                            <h5>Strategy Development</h5>
+                            <p>Custom SEO roadmap based on your business goals and market opportunities</p>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-number">3</div>
+                            <h5>Implementation</h5>
+                            <p>Execute on-page optimization, content creation, and technical improvements</p>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-number">4</div>
+                            <h5>Monitoring & Growth</h5>
+                            <p>Continuous tracking, reporting, and refinement for maximum results</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PPC Service -->
+            <div class="service-detail-card">
+                <div class="service-header">
+                    <i class="fas fa-bullhorn"></i>
+                    <h3>Pay-Per-Click Advertising (PPC)</h3>
+                </div>
+                <p class="service-intro">Drive immediate traffic and conversions with our expertly managed PPC campaigns. We optimize every dollar spent to ensure maximum return on your advertising investment, delivering qualified leads while you sleep.</p>
+                
+                <div class="service-features">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fab fa-google"></i>
+                        </div>
+                        <h4>Google Ads</h4>
+                        <p>Dominate search results with targeted ads that capture high-intent customers</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fab fa-facebook"></i>
+                        </div>
+                        <h4>Social Media Ads</h4>
+                        <p>Reach your ideal audience on Facebook, Instagram, LinkedIn, and more</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h4>Conversion Optimization</h4>
+                        <p>Maximize your ROI with landing page optimization and A/B testing</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-target"></i>
+                        </div>
+                        <h4>Audience Targeting</h4>
+                        <p>Precision targeting to reach your ideal customers at the right moment</p>
+                    </div>
+                </div>
+
+                <div class="process-section">
+                    <div class="process-header">
+                        <h4>Our PPC Process</h4>
+                        <p>Strategic advertising that delivers immediate results</p>
+                    </div>
+                    <div class="process-steps">
+                        <div class="process-step">
+                            <div class="step-number">1</div>
+                            <h5>Campaign Strategy</h5>
+                            <p>Develop targeted campaigns based on your audience and business objectives</p>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-number">2</div>
+                            <h5>Ad Creation</h5>
+                            <p>Craft compelling ad copy and visuals that drive clicks and conversions</p>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-number">3</div>
+                            <h5>Launch & Monitor</h5>
+                            <p>Deploy campaigns and continuously monitor performance metrics</p>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-number">4</div>
+                            <h5>Optimize & Scale</h5>
+                            <p>Continuous A/B testing and optimization to maximize ROI and scale success</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Social Media Service -->
+            <div class="service-detail-card">
+                <div class="service-header">
+                    <i class="fas fa-share-alt"></i>
+                    <h3>Social Media Marketing</h3>
+                </div>
+                <p class="service-intro">Build meaningful connections with your audience through strategic social media campaigns that drive engagement, build brand loyalty, and generate leads across all major platforms. We help you create a community around your brand.</p>
+                
+                <div class="service-features">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <h4>Content Creation</h4>
+                        <p>Engaging posts, stories, and videos that resonate with your Austin audience</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h4>Community Management</h4>
+                        <p>Build relationships and engage with your followers in meaningful ways</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>Influencer Partnerships</h4>
+                        <p>Connect with local Austin influencers to expand your reach authentically</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <h4>Analytics & Insights</h4>
+                        <p>Track performance and optimize your social media strategy for maximum impact</p>
+                    </div>
+                </div>
+
+                <div class="process-section">
+                    <div class="process-header">
+                        <h4>Our Social Media Process</h4>
+                        <p>Building communities that convert</p>
+                    </div>
+                    <div class="process-steps">
+                        <div class="process-step">
+                            <div class="step-number">1</div>
+                            <h5>Brand Strategy</h5>
+                            <p>Develop your unique brand voice and visual identity across platforms</p>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-number">2</div>
+                            <h5>Content Planning</h5>
+                            <p>Create a content calendar that engages and converts your audience</p>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-number">3</div>
+                            <h5>Community Building</h5>
+                            <p>Engage with followers and build meaningful relationships</p>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-number">4</div>
+                            <h5>Growth & Analytics</h5>
+                            <p>Scale your following and measure success with detailed analytics</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Email Marketing Service -->
+            <div class="service-detail-card">
+                <div class="service-header">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email Marketing</h3>
+                </div>
+                <p class="service-intro">Turn prospects into customers and customers into loyal advocates with personalized email campaigns that deliver the right message at the right time. Email marketing remains one of the highest ROI channels in digital marketing.</p>
+                
+                <div class="service-features">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-list"></i>
+                        </div>
+                        <h4>List Building</h4>
+                        <p>Grow your email list with compelling lead magnets and opt-in strategies</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h4>Marketing Automation</h4>
+                        <p>Set up automated sequences that nurture leads and retain customers</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-mobile"></i>
+                        </div>
+                        <h4>Responsive Design</h4>
+                        <p>Beautiful, mobile-responsive emails that look great on any device</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-pie"></i>
+                        </div>
+                        <h4>Performance Tracking</h4>
+                        <p>Detailed analytics to optimize open rates, clicks, and conversions</p>
+                    </div>
+                </div>
+
+                <div class="process-section">
+                    <div class="process-header">
+                        <h4>Our Email Marketing Process</h4>
+                        <p>Turning subscribers into customers</p>
+                    </div>
+                    <div class="process-steps">
+                        <div class="process-step">
+                            <div class="step-number">1</div>
+                            <h5>Strategy & Setup</h5>
+                            <p>Develop email strategy and set up automated workflows</p>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-number">2</div>
+                            <h5>List Segmentation</h5>
+                            <p>Organize subscribers based on behavior, preferences, and lifecycle stage</p>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-number">3</div>
+                            <h5>Campaign Creation</h5>
+                            <p>Design beautiful, mobile-responsive emails that drive action</p>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-number">4</div>
+                            <h5>Optimize & Scale</h5>
+                            <p>A/B test and optimize for higher open rates and conversions</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Transform Your Digital Presence?</h2>
+            <p>Let's discuss which services will have the biggest impact on your business growth</p>
+            <div class="cta-buttons">
+                <a href="contact.html" class="btn btn-primary">Get Your Free Consultation</a>
+                <a href="portfolio.html" class="btn btn-secondary">View Our Success Stories</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Koi Digital Marketing. Helping Austin businesses thrive online.</p>
+            <p>📧 hello@koidigitalmarketing.com | 📍 Austin, Texas</p>
+        </div>
+    </footer>
+</body>
+</html>
