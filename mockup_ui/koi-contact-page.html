@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Koi Digital Marketing - Free Consultation | Austin, Texas</title>
+    <meta name="description" content="Get your free digital marketing consultation. Contact Koi Digital Marketing in Austin, Texas. Ready to grow your business with proven strategies.">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #6366f1;
+            --secondary-color: #0f172a;
+            --accent-color: #ec4899;
+            --success-color: #10b981;
+            --dark-color: #0f172a;
+            --light-gray: #f8fafc;
+            --medium-gray: #64748b;
+            --white: #ffffff;
+            --gradient: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            --gradient-alt: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            --shadow-lg: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark-color);
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark-color);
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-links a.active::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--gradient);
+        }
+
+        /* Page Hero */
+        .page-hero {
+            padding: 8rem 0 4rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #667eea 100%);
+            color: var(--white);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 20%, rgba(99, 102, 241, 0.3) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 80%, rgba(236, 72, 153, 0.3) 0%, transparent 50%);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .page-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .page-hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            padding: 6rem 0;
+            background: var(--white);
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        /* Contact Info */
+        .contact-info {
+            background: var(--light-gray);
+            padding: 3rem;
+            border-radius: 30px;
+            height: fit-content;
+        }
+
+        .contact-info h3 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--dark-color);
+            font-weight: 700;
+        }
+
+        .contact-info p {
+            color: var(--medium-gray);
+            margin-bottom: 3rem;
+            line-height: 1.7;
+            font-size: 1.1rem;
+        }
+
+        .contact-details {
+            list-style: none;
+            margin-bottom: 3rem;
+        }
+
+        .contact-details li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            color: var(--medium-gray);
+            font-size: 1.1rem;
+        }
+
+        .contact-details i {
+            width: 50px;
+            height: 50px;
+            background: var(--gradient);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            margin-right: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .contact-details strong {
+            color: var(--dark-color);
+            display: block;
+            margin-bottom: 0.2rem;
+        }
+
+        .office-hours {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 20px;
+            border-left: 4px solid var(--success-color);
+        }
+
+        .office-hours h4 {
+            color: var(--dark-color);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .office-hours h4::before {
+            content: '🕒';
+            margin-right: 0.5rem;
+            font-size: 1.5rem;
+        }
+
+        .hours-list {
+            list-style: none;
+        }
+
+        .hours-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .hours-list li:last-child {
+            border-bottom: none;
+        }
+
+        /* Contact Form */
+        .contact-form {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 30px;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-form::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: var(--gradient);
+        }
+
+        .form-header {
+            margin-bottom: 2rem;
+        }
+
+        .form-header h3 {
+            font-size: 1.8rem;
+            color: var(--dark-color);
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .form-header p {
+            color: var(--medium-gray);
+            font-size: 1rem;
+        }
+
+        .form-group {
+            margin-bottom: 2rem;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.8rem;
+            color: var(--dark-color);
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 1.2rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 15px;
+            font-size: 1rem;
+            transition: var(--transition);
+            font-family: inherit;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+        }
+
+        .form-group textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        .form-group select {
+            cursor: pointer;
+        }
+
+        /* Service Selection */
+        .service-selection {
+            margin-bottom: 2rem;
+        }
+
+        .service-options {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .service-option {
+            position: relative;
+        }
+
+        .service-option input[type="checkbox"] {
+            position: absolute;
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+        }
+
+        .service-option label {
+            display: block;
+            padding: 1rem;
+            background: var(--light-gray);
+            border: 2px solid transparent;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 500;
+            text-align: center;
+        }
+
+        .service-option input[type="checkbox"]:checked + label {
+            background: var(--primary-color);
+            color: var(--white);
+            border-color: var(--primary-color);
+        }
+
+        .service-option:hover label {
+            border-color: var(--primary-color);
+        }
+
+        /* Submit Button */
+        .submit-section {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .btn {
+            padding: 1.2rem 3rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background: var(--gradient);
+            color: var(--white);
+            box-shadow: var(--shadow);
+            width: 100%;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-primary:active {
+            transform: translateY(0);
+        }
+
+        /* Success Message */
+        .success-message {
+            display: none;
+            background: var(--success-color);
+            color: var(--white);
+            padding: 1rem;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 6rem 0;
+            background: var(--light-gray);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: var(--dark-color);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .section-header p {
+            font-size: 1.2rem;
+            color: var(--medium-gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .faq-item {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 25px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .faq-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .faq-item h3 {
+            font-size: 1.3rem;
+            color: var(--dark-color);
+            margin-bottom: 1rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+        }
+
+        .faq-item h3::before {
+            content: '❓';
+            margin-right: 0.5rem;
+            font-size: 1.5rem;
+        }
+
+        .faq-item p {
+            color: var(--medium-gray);
+            line-height: 1.7;
+        }
+
+        /* CTA Section */
+        .final-cta {
+            padding: 6rem 0;
+            background: var(--dark-color);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .final-cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .final-cta p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin: 3rem 0;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-stat {
+            text-align: center;
+        }
+
+        .cta-stat h3 {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .cta-stat p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-color);
+            color: var(--white);
+            padding: 3rem 0 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            text-align: center;
+        }
+
+        .footer-content p {
+            margin-bottom: 1rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .page-hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .service-options {
+                grid-template-columns: 1fr;
+            }
+
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-stats {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .contact-info,
+            .contact-form {
+                padding: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .contact-info,
+            .contact-form,
+            .faq-item {
+                padding: 1.5rem;
+            }
+
+            .page-hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .contact-details i {
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">KoiDigital</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Let's Grow Your Business Together</h1>
+            <p>Ready to take your digital marketing to the next level? Get your free consultation and discover how we can help you achieve remarkable growth.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-content">
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <p>Ready to discuss your digital marketing goals? I'd love to learn about your business and explore how we can help you achieve breakthrough growth in the Austin market.</p>
+                    
+                    <ul class="contact-details">
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong>Email</strong>
+                                hello@koidigitalmarketing.com
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>Location</strong>
+                                Austin, Texas
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <strong>Response Time</strong>
+                                Within 24 hours
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="office-hours">
+                        <h4>Business Hours</h4>
+                        <ul class="hours-list">
+                            <li><span>Monday - Friday</span><span>9:00 AM - 6:00 PM</span></li>
+                            <li><span>Saturday</span><span>10:00 AM - 2:00 PM</span></li>
+                            <li><span>Sunday</span><span>Closed</span></li>
+                            <li><span>Emergency Support</span><span>Available for clients</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form">
+                    <div class="success-message" id="successMessage">
+                        <i class="fas fa-check-circle"></i> Thank you! Your message has been sent successfully. We'll get back to you within 24 hours.
+                    </div>
+
+                    <div class="form-header">
+                        <h3>Free Consultation Request</h3>
+                        <p>Tell us about your business and marketing goals. All consultations are completely free with no obligation.</p>
+                    </div>
+
+                    <form id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name *</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name *</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="company">Company Name</label>
+                                <input type="text" id="company" name="company">
+                            </div>
+                            <div class="form-group">
+                                <label for="industry">Industry</label>
+                                <select id="industry" name="industry">
+                                    <option value="">Select your industry</option>
+                                    <option value="technology">Technology/SaaS</option>
+                                    <option value="ecommerce">E-commerce</option>
+                                    <option value="restaurant">Restaurant/Food</option>
+                                    <option value="retail">Retail</option>
+                                    <option value="healthcare">Healthcare</option>
+                                    <option value="professional">Professional Services</option>
+                                    <option value="real-estate">Real Estate</option>
+                                    <option value="fitness">Fitness/Wellness</option>
+                                    <option value="education">Education</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="service-selection">
+                            <label>Which services are you interested in? (Select all that apply)</label>
+                            <div class="service-options">
+                                <div class="service-option">
+                                    <input type="checkbox" id="seo" name="services" value="seo">
+                                    <label for="seo">SEO</label>
+                                </div>
+                                <div class="service-option">
+                                    <input type="checkbox" id="ppc" name="services" value="ppc">
+                                    <label for="ppc">PPC Advertising</label>
+                                </div>
+                                <div class="service-option">
+                                    <input type="checkbox" id="social" name="services" value="social">
+                                    <label for="social">Social Media</label>
+                                </div>
+                                <div class="service-option">
+                                    <input type="checkbox" id="email" name="services" value="email">
+                                    <label for="email">Email Marketing</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="budget">Monthly Marketing Budget</label>
+                            <select id="budget" name="budget">
+                                <option value="">Select your budget range</option>
+                                <option value="under-1k">Under $1,000</option>
+                                <option value="1k-3k">$1,000 - $3,000</option>
+                                <option value="3k-5k">$3,000 - $5,000</option>
+                                <option value="5k-10k">$5,000 - $10,000</option>
+                                <option value="10k-plus">$10,000+</option>
+                                <option value="not-sure">Not sure yet</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Tell us about your business goals and current marketing challenges *</label>
+                            <textarea id="message" name="message" placeholder="What are your main business goals? What marketing challenges are you facing? What results are you hoping to achieve?" required></textarea>
+                        </div>
+
+                        <div class="submit-section">
+                            <button type="submit" class="btn btn-primary">Get My Free Consultation</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Quick answers to common questions about working with Koi Digital Marketing</p>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>How much does digital marketing cost?</h3>
+                    <p>Every business is unique, so we create custom proposals based on your goals, industry, and budget. Our services typically range from $1,500-$10,000+ per month depending on scope. We'll discuss pricing during your free consultation.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>How quickly will I see results?</h3>
+                    <p>PPC and social media advertising can generate leads within days. SEO typically takes 3-6 months for significant results. Email marketing shows results within weeks. We set realistic expectations and provide monthly progress reports.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Do you work with businesses outside Austin?</h3>
+                    <p>While we specialize in Austin businesses, we work with companies throughout Texas and beyond. Our local Austin expertise is valuable for any business wanting to understand and compete in growing markets.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What makes you different from other agencies?</h3>
+                    <p>We're not just a vendor – we're your growth partner. As a local Austin expert, I understand the market intimately. We focus on measurable results, transparent reporting, and building long-term relationships.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Do you require long-term contracts?</h3>
+                    <p>We believe in earning your business every month. While we recommend 6-month engagements for best results, we offer flexible terms. Most clients stay with us long-term because they see consistent growth.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Can you help if my previous marketing didn't work?</h3>
+                    <p>Absolutely! We'll audit your previous efforts to understand what went wrong and develop a new strategy. Many of our best success stories come from businesses that had disappointing experiences with other agencies.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>Ready to Get Started?</h2>
+            <p>Join the Austin businesses already growing with Koi Digital Marketing</p>
+            <div class="cta-stats">
+                <div class="cta-stat">
+                    <h3>24hrs</h3>
+                    <p>Response Time</p>
+                </div>
+                <div class="cta-stat">
+                    <h3>Free</h3>
+                    <p>Consultation</p>
+                </div>
+                <div class="cta-stat">
+                    <h3>100%</h3>
+                    <p>No Obligation</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Koi Digital Marketing. Helping Austin businesses thrive online.</p>
+            <p>📧 hello@koidigitalmarketing.com | 📍 Austin, Texas</p>
+        </div>
+    </footer>
+
+    <script>
+        // Form submission handler
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Show success message
+            document.getElementById('successMessage').style.display = 'block';
+            
+            // Scroll to success message
+            document.getElementById('successMessage').scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'center'
+            });
+            
+            // Reset form
+            this.reset();
+            
+            // Hide success message after 5 seconds
+            setTimeout(function() {
+                document.getElementById('successMessage').style.display = 'none';
+            }, 5000);
+        });
+
+        // Form validation and styling
+        const formInputs = document.querySelectorAll('input, select, textarea');
+        formInputs.forEach(input => {
+            input.addEventListener('blur', function() {
+                if (this.value.trim() !== '') {
+                    this.style.borderColor = '#10b981';
+                } else if (this.required) {
+                    this.style.borderColor = '#ef4444';
+                }
+            });
+
+            input.addEventListener('focus', function() {
+                this.style.borderColor = '#6366f1';
+            });
+        });
+
+        // Service selection styling
+        const serviceCheckboxes = document.querySelectorAll('input[name="services"]');
+        serviceCheckboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', function() {
+                const label = this.nextElementSibling;
+                if (this.checked) {
+                    label.style.background = '#6366f1';
+                    label.style.color = '#ffffff';
+                } else {
+                    label.style.background = '#f8fafc';
+                    label.style.color = '#0f172a';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

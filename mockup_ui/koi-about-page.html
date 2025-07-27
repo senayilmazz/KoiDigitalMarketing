@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Koi Digital Marketing - Austin's Digital Marketing Expert</title>
+    <meta name="description" content="Meet the founder of Koi Digital Marketing. Passionate about helping Austin startups and local businesses thrive through data-driven digital marketing strategies.">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #6366f1;
+            --secondary-color: #0f172a;
+            --accent-color: #ec4899;
+            --success-color: #10b981;
+            --dark-color: #0f172a;
+            --light-gray: #f8fafc;
+            --medium-gray: #64748b;
+            --white: #ffffff;
+            --gradient: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            --gradient-alt: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            --shadow-lg: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark-color);
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark-color);
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-links a.active::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--gradient);
+        }
+
+        /* Page Hero */
+        .page-hero {
+            padding: 8rem 0 4rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #667eea 100%);
+            color: var(--white);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 20%, rgba(99, 102, 241, 0.3) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 80%, rgba(236, 72, 153, 0.3) 0%, transparent 50%);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .page-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .page-hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Founder Story Section */
+        .founder-story {
+            padding: 6rem 0;
+            background: var(--white);
+        }
+
+        .founder-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 4rem;
+            align-items: center;
+            margin-bottom: 4rem;
+        }
+
+        .founder-image {
+            position: relative;
+        }
+
+        .founder-avatar {
+            width: 350px;
+            height: 350px;
+            border-radius: 30px;
+            background: var(--gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 8rem;
+            color: var(--white);
+            margin: 0 auto;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .founder-avatar::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+        }
+
+        .founder-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: var(--dark-color);
+            font-weight: 700;
+        }
+
+        .founder-text h2 .highlight {
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .founder-text p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            color: var(--medium-gray);
+        }
+
+        .founder-text .intro {
+            font-size: 1.3rem;
+            color: var(--dark-color);
+            font-weight: 500;
+        }
+
+        /* Mission & Values */
+        .mission-values {
+            padding: 6rem 0;
+            background: var(--light-gray);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: var(--dark-color);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .section-header p {
+            font-size: 1.2rem;
+            color: var(--medium-gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .value-card {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 25px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .value-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--gradient);
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .value-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+            color: var(--white);
+            font-size: 2rem;
+        }
+
+        .value-card h3 {
+            font-size: 1.5rem;
+            color: var(--dark-color);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .value-card p {
+            color: var(--medium-gray);
+            line-height: 1.7;
+        }
+
+        /* Skills & Expertise */
+        .skills-expertise {
+            padding: 6rem 0;
+            background: var(--white);
+        }
+
+        .expertise-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-top: 3rem;
+        }
+
+        .skills-section, .certifications-section {
+            background: var(--light-gray);
+            padding: 3rem;
+            border-radius: 25px;
+        }
+
+        .skills-section h3, .certifications-section h3 {
+            font-size: 1.8rem;
+            color: var(--dark-color);
+            margin-bottom: 2rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+        }
+
+        .skills-section h3::before {
+            content: '🚀';
+            margin-right: 1rem;
+            font-size: 2rem;
+        }
+
+        .certifications-section h3::before {
+            content: '🏆';
+            margin-right: 1rem;
+            font-size: 2rem;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        .skill-item {
+            background: var(--white);
+            padding: 1rem 1.5rem;
+            border-radius: 15px;
+            text-align: center;
+            transition: var(--transition);
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .skill-item:hover {
+            background: var(--primary-color);
+            color: var(--white);
+            transform: translateX(5px);
+        }
+
+        .certification-list {
+            list-style: none;
+        }
+
+        .certification-list li {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 15px;
+            margin-bottom: 1rem;
+            border-left: 4px solid var(--success-color);
+            transition: var(--transition);
+        }
+
+        .certification-list li:hover {
+            background: var(--success-color);
+            color: var(--white);
+            transform: translateX(5px);
+        }
+
+        .certification-list li strong {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Austin Connection */
+        .austin-connection {
+            padding: 6rem 0;
+            background: var(--dark-color);
+            color: var(--white);
+        }
+
+        .austin-content {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .austin-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            font-weight: 700;
+        }
+
+        .austin-content p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            opacity: 0.9;
+        }
+
+        .austin-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .austin-feature {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2.5rem 2rem;
+            border-radius: 20px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            transition: var(--transition);
+        }
+
+        .austin-feature:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-5px);
+        }
+
+        .austin-feature i {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: var(--accent-color);
+        }
+
+        .austin-feature h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .austin-feature p {
+            opacity: 0.8;
+            line-height: 1.6;
+        }
+
+        /* Company Timeline */
+        .company-timeline {
+            padding: 6rem 0;
+            background: var(--light-gray);
+        }
+
+        .timeline-container {
+            position: relative;
+            max-width: 800px;
+            margin: 3rem auto 0;
+        }
+
+        .timeline-line {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: var(--gradient);
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            display: flex;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .timeline-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .timeline-content {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            width: 45%;
+            position: relative;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-right: 55%;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content {
+            margin-left: 55%;
+        }
+
+        .timeline-date {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background: var(--gradient);
+            color: var(--white);
+            padding: 1rem 1.5rem;
+            border-radius: 25px;
+            font-weight: 600;
+            white-space: nowrap;
+            box-shadow: var(--shadow);
+        }
+
+        .timeline-content h3 {
+            font-size: 1.5rem;
+            color: var(--dark-color);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .timeline-content p {
+            color: var(--medium-gray);
+            line-height: 1.6;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 6rem 0;
+            background: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Buttons */
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background: var(--white);
+            color: var(--primary-color);
+            box-shadow: var(--shadow);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+
+        .btn-secondary:hover {
+            background: var(--white);
+            color: var(--primary-color);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-color);
+            color: var(--white);
+            padding: 3rem 0 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            text-align: center;
+        }
+
+        .footer-content p {
+            margin-bottom: 1rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .page-hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .founder-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .founder-avatar {
+                width: 250px;
+                height: 250px;
+                font-size: 6rem;
+            }
+
+            .expertise-content {
+                grid-template-columns: 1fr;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .austin-features {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline-line {
+                left: 20px;
+            }
+
+            .timeline-item {
+                flex-direction: row !important;
+            }
+
+            .timeline-content {
+                width: calc(100% - 60px);
+                margin-left: 60px !important;
+                margin-right: 0 !important;
+            }
+
+            .timeline-date {
+                left: 20px;
+                transform: translateX(-50%);
+                font-size: 0.9rem;
+                padding: 0.5rem 1rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .founder-avatar {
+                width: 200px;
+                height: 200px;
+                font-size: 4rem;
+            }
+
+            .value-card,
+            .skills-section,
+            .certifications-section {
+                padding: 2rem;
+            }
+
+            .austin-feature {
+                padding: 2rem 1.5rem;
+            }
+
+            .timeline-content {
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">KoiDigital</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>About Koi Digital Marketing</h1>
+            <p>Passionate about helping Austin businesses thrive in the digital landscape through data-driven strategies and authentic connections</p>
+        </div>
+    </section>
+
+    <!-- Founder Story -->
+    <section class="founder-story">
+        <div class="container">
+            <div class="founder-content">
+                <div class="founder-image">
+                    <div class="founder-avatar">
+                        🎯
+                    </div>
+                </div>
+                <div class="founder-text">
+                    <h2>Hi, I'm the <span class="highlight">founder</span> behind Koi Digital</h2>
+                    <p class="intro">Welcome to Koi Digital Marketing, where data meets creativity to drive real business growth.</p>
+                    <p>After years of watching amazing Austin businesses struggle to get the online visibility they deserve, I founded Koi Digital Marketing with a simple mission: to help local startups and small businesses compete and win in the digital space.</p>
+                    <p>I believe every business has a unique story worth telling, and my job is to amplify that story through strategic digital marketing that delivers measurable results. Whether you're a tech startup looking to scale or a local restaurant wanting to fill more tables, I'm here to help you achieve your goals.</p>
+                    <p>What sets me apart? I combine the analytical mindset of a data scientist with the creative soul of a storyteller. I don't just run campaigns – I build digital ecosystems that grow with your business.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Values -->
+    <section class="mission-values">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Mission & Values</h2>
+                <p>The principles that guide everything we do at Koi Digital Marketing</p>
+            </div>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Results-Driven</h3>
+                    <p>Every strategy, campaign, and decision is backed by data and focused on delivering measurable ROI. We don't just track vanity metrics – we focus on what actually grows your business.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Austin-First</h3>
+                    <p>We understand the unique Austin market, from South by Southwest to the local food scene. This local expertise helps us create campaigns that truly resonate with your community.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Partnership Approach</h3>
+                    <p>We're not just a vendor – we're your growth partner. We take the time to understand your business, goals, and challenges to create strategies that fit your unique needs.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Innovation-Focused</h3>
+                    <p>Digital marketing evolves rapidly, and so do we. We stay ahead of trends, test new strategies, and constantly optimize to ensure you always have a competitive edge.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Transparency</h3>
+                    <p>No black boxes or confusing jargon. We provide clear reporting, honest communication, and straightforward explanations of what we're doing and why it works.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Small Business Champion</h3>
+                    <p>We believe small businesses are the backbone of Austin's economy. Our mission is to level the playing field and help you compete with much larger companies.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills & Expertise -->
+    <section class="skills-expertise">
+        <div class="container">
+            <div class="section-header">
+                <h2>Skills & Expertise</h2>
+                <p>The technical skills and industry knowledge that power our success</p>
+            </div>
+            <div class="expertise-content">
+                <div class="skills-section">
+                    <h3>Core Skills</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">SEO Strategy</div>
+                        <div class="skill-item">PPC Management</div>
+                        <div class="skill-item">Social Media</div>
+                        <div class="skill-item">Email Marketing</div>
+                        <div class="skill-item">Content Marketing</div>
+                        <div class="skill-item">Analytics & Data</div>
+                        <div class="skill-item">Conversion Optimization</div>
+                        <div class="skill-item">Local SEO</div>
+                        <div class="skill-item">Marketing Automation</div>
+                        <div class="skill-item">Brand Strategy</div>
+                    </div>
+                </div>
+                <div class="certifications-section">
+                    <h3>Certifications</h3>
+                    <ul class="certification-list">
+                        <li>
+                            <strong>Google Ads Certified</strong>
+                            Search, Display, Shopping & Video
+                        </li>
+                        <li>
+                            <strong>Google Analytics Expert</strong>
+                            GA4 & Universal Analytics
+                        </li>
+                        <li>
+                            <strong>Facebook Marketing Professional</strong>
+                            Meta Business & Instagram Advertising
+                        </li>
+                        <li>
+                            <strong>HubSpot Marketing Certified</strong>
+                            Inbound Marketing & Sales
+                        </li>
+                        <li>
+                            <strong>Local SEO Specialist</strong>
+                            Austin Market Expert
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Austin Connection -->
+    <section class="austin-connection">
+        <div class="container">
+            <div class="austin-content">
+                <h2>Why Austin? Why Local?</h2>
+                <p>Austin isn't just where I work – it's where I live, breathe, and build community. This city's unique blend of technology innovation, creative spirit, and entrepreneurial energy makes it the perfect place to help businesses grow. I understand the local market because I'm part of it.</p>
+            </div>
+            <div class="austin-features">
+                <div class="austin-feature">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Local Market Expert</h3>
+                    <p>Deep understanding of Austin's business landscape, from downtown tech startups to East Side restaurants</p>
+                </div>
+                <div class="austin-feature">
+                    <i class="fas fa-network-wired"></i>
+                    <h3>Community Connected</h3>
+                    <p>Active in Austin's business community with relationships that can benefit your growth</p>
+                </div>
+                <div class="austin-feature">
+                    <i class="fas fa-clock"></i>
+                    <h3>Always Available</h3>
+                    <p>Being local means we're in the same timezone and can meet face-to-face when needed</p>
+                </div>
+                <div class="austin-feature">
+                    <i class="fas fa-star"></i>
+                    <h3>Keep Austin Weird</h3>
+                    <p>We celebrate what makes your business unique and help you stand out authentically</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Timeline -->
+    <section class="company-timeline">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Journey</h2>
+                <p>The milestones that shaped Koi Digital Marketing</p>
+            </div>
+            <div class="timeline-container">
+                <div class="timeline-line"></div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>The Idea</h3>
+                        <p>Recognized the gap between amazing local businesses and effective digital marketing. Started developing the vision for a truly local, results-focused agency.</p>
+                    </div>
+                    <div class="timeline-date">2023</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>First Clients</h3>
+                        <p>Launched Koi Digital Marketing with three founding clients – a tech startup, a local restaurant, and an e-commerce store. Achieved 200%+ growth for all three within 6 months.</p>
+                    </div>
+                    <div class="timeline-date">Early 2024</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Rapid Growth</h3>
+                        <p>Word-of-mouth referrals led to explosive growth. Expanded services and refined our process to handle 15+ active clients while maintaining personalized service.</p>
+                    </div>
+                    <div class="timeline-date">Mid 2024</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Industry Recognition</h3>
+                        <p>Featured in Austin Business Journal for innovative local marketing strategies. Achieved an average 250% ROI improvement across all client accounts.</p>
+                    </div>
+                    <div class="timeline-date">Late 2024</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Looking Forward</h3>
+                        <p>Continuing to grow while maintaining our commitment to personalized service and exceptional results. The goal: help 100 Austin businesses achieve breakthrough growth by 2026.</p>
+                    </div>
+                    <div class="timeline-date">2025</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Work Together?</h2>
+            <p>Let's have a conversation about your business goals and how we can help you achieve them</p>
+            <div class="cta-buttons">
+                <a href="contact.html" class="btn btn-primary">Schedule a Free Consultation</a>
+                <a href="portfolio.html" class="btn btn-secondary">See Our Success Stories</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Koi Digital Marketing. Helping Austin businesses thrive online.</p>
+            <p>📧 hello@koidigitalmarketing.com | 📍 Austin, Texas</p>
+        </div>
+    </footer>
+</body>
+</html>
